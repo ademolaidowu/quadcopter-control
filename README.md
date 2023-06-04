@@ -139,6 +139,7 @@ The following lines contain variables that should be adjusted to produce the req
     <td><img src="img/4b_helixtrajectory.jpg"/></td>
   </tr>
 </table>
+
 **Detailed explanation of the results and its implications are available in the Project Report**
 <br>
 
