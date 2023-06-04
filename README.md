@@ -9,8 +9,7 @@
 
 <table>
   <tr>
-    <td><img src="img/naijablog1.png"/></td>
-    <td><img src="img/naijablog2.png"/></td>
+    <td><img src="img/ca.png"/></td>
   </tr>
 </table>
 <br>
@@ -45,7 +44,7 @@
 ## ➡️ Introduction
 A quadcopter, also known as a quadrotor, is an unmanned aerial vehicle propelled by four rotors in cross-configuration. A quadcopter's dynamics are extremely nonlinear, it is an underactuated system with six degrees of freedom and four control inputs which are the rotor velocities.<br>
 The number and complexity of applications for quadcopter systems continues to grow on a daily basis, the control techniques that are employed must also improve in order to enhance performance and adaptability to new situations. This thesis would be studying the modelling of the quadcopter system and nonlinear control methods that can be implemented on the system for stability and trajectory tracking.
-<br>
+<br><br>
 
 
 ## ➡️ Aim and Objectives of the Study
@@ -56,6 +55,15 @@ The project aims to develop a mathematical model of a quadcopter system and impl
 * Simulate and perform a comparative analysis of the implemented control techniques on the quadcopter system for stabilization and trajectory tracking.
 <br><br>
 
+
+<table>
+  <tr>
+    <td><img src="img/qc1.jpg"/></td>
+  </tr>
+</table>
+
+<p style="text-align: center; font-weight: bold">Flowchart Procedure</p>
+<br><br>
 
 ## ➡️ System Modelling
 The quadcopter system is complex and in order to control it, the quadcopter is modelled on the following assumptions:
@@ -70,12 +78,6 @@ The quadcopter system is complex and in order to control it, the quadcopter is m
 
 
 ## ➡️ Control Architecture and Development
-<table>
-  <tr>
-    <td><img src="img/ca.png"/></td>
-  </tr>
-</table>
-
 **The complete mathematical derivations of the PID, Feedback Linearization and Trajectory tracking control are available in the Project Report**
 <br><br>
 
@@ -96,7 +98,48 @@ The following lines contain variables that should be adjusted to produce the req
 
 
 ## ➡️ Results
-
+<table>
+  <tr>
+    <td><img src="img/0_angles.jpg"/></td>
+    <td><img src="img/0_position.jpg"/></td>
+    <td><img src="img/0_input.jpg"/></td>
+  </tr>
+</table>
+<p style="text-align: center; font-weight: bold">Simulation without any control algorithm</p>
+<br>
+<table>
+  <tr>
+    <td><img src="img/1_angles.jpg"/></td>
+    <td><img src="img/1_position.jpg"/></td>
+    <td><img src="img/1_input.jpg"/></td>
+  </tr>
+</table>
+<p style="text-align: center; font-weight: bold">Simulation using PD control algorithm for Stabilization</p>
+<br>
+<table>
+  <tr>
+    <td><img src="img/2_angles.jpg"/></td>
+    <td><img src="img/2_position.jpg"/></td>
+    <td><img src="img/2_input.jpg"/></td>
+  </tr>
+</table>
+<p style="text-align: center; font-weight: bold">Stabilization with Zero Mapping of Position States using PD algorithm</p>
+<br>
+<table>
+  <tr>
+    <td style="text-align: center; font-weight: bold">Trajectory Tracking using PD algorithm</td>
+    <td style="text-align: center; font-weight: bold">Trajectory Tracking using PD and Feedback Linearization algorithm</td>
+  </tr>
+  <tr>
+    <td><img src="img/3_step.png"/></td>
+    <td><img src="img/4_step.png"/></td>
+  </tr>
+  <tr>
+    <td><img src="img/3b_spiraltrajectory.jpg"/></td>
+    <td><img src="img/4b_helixtrajectory.jpg"/></td>
+  </tr>
+</table>
+**Detailed explanation of the results and its implications are available in the Project Report**
 <br>
 
 
@@ -107,14 +150,14 @@ The aim and objectives stated at the beginning of the project have been achieved
 * The FBL system was computed and simulated without small signal approximations.
 
 The results from simulation show that the PD control produces satisfactory results for system stabilization but fails to do so for trajectory tracking of the quadcopter. Hence the need of a different control technique called the feedback linearization control which produces excellent results for trajectory tracking of the quadcopter system. 
-<br>
+<br><br>
 
 
 ## ➡️ Novelty of the Project
-PD controller was used for attitude stabilization which is to stabilize the angles to zero state but the position variables cannot be stabilized because the state variables are not observable (normal approach). I tried a new approach which I didn’t see in other articles where I mapped the position variables to the angle variables which are controllable so I could drive all states to zero stability which I achieved but the downside is that it takes a longer time to achieve this stability so it’s not efficient and should only be considered when absolute zero stability is the aim without considering time efficiency.
+PD controller was used for attitude stabilization which is to stabilize the angles to zero state but the position variables cannot be stabilized because the state variables are not observable (normal approach). I tried a new approach which I didn’t see in other articles where I mapped the position variables to the angle variables which are controllable so I could drive all states to zero stability which I achieved but the downside is that it takes  a longer time to achieve this stability so it’s not efficient and should only be considered when absolute zero stability is the aim without considering time efficiency.
 
 Another one was the full derivation of the Feedback linearization system control using the principle of NDI(Non linear Dynamic Inversion). I didn’t come across the full calculation and derivation in any quadcopter system article so this was done personally and also majority made use of the FBL system with small angle approximations but I did mine without those approximations.
-<br>
+<br><br>
 
 
 ## ➡️ References
