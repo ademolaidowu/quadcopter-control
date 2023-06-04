@@ -16,6 +16,8 @@
 
 <br>
 <p><b>MODELLING AND NONLINEAR CONTROL OF A QUADCOPTER FOR STABILIZATION AND TRAJECTORY TRACKING</b></p>
+
+**The article for this project is published in [Journal of Engineering](https://www.researchgate.net/publication/364312377_Modeling_and_Nonlinear_Control_of_a_Quadcopter_for_Stabilization_and_Trajectory_Tracking)**
 <br>
 
 
